@@ -13,8 +13,6 @@ class GA{
   private int iterator = 0;
   
  
-  
-  // @Magda
   GA( String target, int pop_size, int iterations, float pm, float pc, int maxCross, int maxMut){
     //algorithm parameters:
     this.target = target;
@@ -30,7 +28,7 @@ class GA{
     
   }
   
-  //1 step of algortithm, next generation of population
+  //1 step of algorithm, next generation of population
   public void step(){
      pop.createMatingPool();
      pop.reproduction(this.pop_size, this.maxCrossPoints, this.maxMutPoints, this.pc, this.pm, this.target);
@@ -50,11 +48,5 @@ class GA{
     println("Number of generations: " + this.iterator);
   }
   
-  /**
-  * @author Daniel Skórczyński
-  * @fun getIterator
-  * @brief Returns algorithm iterator
-  * @return int iterator
-  */
   public int getIterator() {return iterator;}
 }
